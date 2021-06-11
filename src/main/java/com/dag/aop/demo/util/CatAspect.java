@@ -2,8 +2,6 @@ package com.dag.aop.demo.util;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -32,7 +30,7 @@ public class CatAspect {
 
     //增强
     @Before("pointCut()")
-    public Object around(JoinPoint jp) {
+    public Object before(JoinPoint jp) {
         String className = jp.getSignature().getDeclaringType().getSimpleName();
         String methodName = jp.getSignature().getName();
         logger.info(className + "::" + methodName);
