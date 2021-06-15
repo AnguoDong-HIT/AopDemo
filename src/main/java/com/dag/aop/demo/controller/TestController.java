@@ -1,6 +1,9 @@
 package com.dag.aop.demo.controller;
 
+import com.dag.aop.demo.pojo.User;
 import com.dag.aop.demo.service.TestService;
+import com.dag.aop.demo.service.UserService;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,8 +20,16 @@ public class TestController {
     @Resource
     private TestService testService;
 
+    @Resource
+    private UserService userService;
+
     @RequestMapping("/test")
     public String getString() {
         return testService.getSting();
+    }
+
+    @PostMapping("/insert")
+    public int insertSelective(User record) {
+        return userService.insertSelective(record);
     }
 }
