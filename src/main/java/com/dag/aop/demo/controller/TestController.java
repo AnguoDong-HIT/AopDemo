@@ -3,9 +3,7 @@ package com.dag.aop.demo.controller;
 import com.dag.aop.demo.pojo.User;
 import com.dag.aop.demo.service.TestService;
 import com.dag.aop.demo.service.UserService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -31,5 +29,10 @@ public class TestController {
     @PostMapping("/insert")
     public int insertSelective(User record) {
         return userService.insertSelective(record);
+    }
+
+    @GetMapping("/user/{id}")
+    public User selectByPrimaryKey(@PathVariable Integer id) {
+        return userService.selectByPrimaryKey(id);
     }
 }
