@@ -1,0 +1,40 @@
+@startuml
+
+skinparam linetype ortho
+
+entity "lu_lecture" as lu_lecture {
+    id: 主键
+		...
+		is_public
+		target_seller_type
+		material_id
+}
+
+entity "lecture_material_live_stream" as lecture_material_live_stream {
+    id: 主键
+		...
+		golden_strategy_group_id
+		white_list_link
+}
+
+entity "livestream_whitelist" as livestream_whitelist {
+    id: 主键
+    live_uuid
+		course_id
+		seller_id
+}
+lu_lecture ||..|| lecture_material_live_stream
+lu_lecture }|..|{ livestream_whitelist
+
+entity "lu_course" as lu_course {
+    id: 主键
+		...
+		is_public
+}
+
+entity "lu_event" as lu_event {
+    id: 主键
+		...
+}
+
+@enduml
