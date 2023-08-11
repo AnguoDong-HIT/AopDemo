@@ -1,6 +1,6 @@
 package com.dag.aop.demo.mapper;
 
-import com.dag.aop.demo.pojo.User;
+import com.dag.aop.demo.domain.po.User;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

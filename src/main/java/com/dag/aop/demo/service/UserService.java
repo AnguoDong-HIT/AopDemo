@@ -2,8 +2,7 @@ package com.dag.aop.demo.service;
 
 import com.dag.aop.demo.annotation.CatAopTest;
 import com.dag.aop.demo.mapper.UserMapper;
-import com.dag.aop.demo.pojo.User;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.dag.aop.demo.domain.po.User;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

@@ -1,4 +1,4 @@
-package com.dag.aop.demo.pojo;
+package com.dag.aop.demo.domain.example;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.dag.aop.demo.controller;
 
-import com.dag.aop.demo.pojo.User;
+import com.dag.aop.demo.domain.po.User;
 import com.dag.aop.demo.service.TestService;
 import com.dag.aop.demo.service.UserService;
 import org.springframework.web.bind.annotation.*;

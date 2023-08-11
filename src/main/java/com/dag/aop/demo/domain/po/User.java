@@ -1,4 +1,4 @@
-package com.dag.aop.demo.pojo;
+package com.dag.aop.demo.domain.po;
 
 import lombok.Builder;
 import lombok.Data;

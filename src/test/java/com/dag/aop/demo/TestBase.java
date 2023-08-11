@@ -5,7 +5,13 @@ package com.dag.aop.demo;
  * @date: 2021/6/8 11:08 上午
  * @Description:
  */
+import com.dag.aop.demo.convert.SkuConvert;
+import com.dag.aop.demo.domain.dto.SkuDTO;
+import com.dag.aop.demo.domain.po.Sku;
+import lombok.extern.slf4j.Slf4j;
+import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -14,6 +20,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Slf4j
 public abstract class TestBase {
 
 }

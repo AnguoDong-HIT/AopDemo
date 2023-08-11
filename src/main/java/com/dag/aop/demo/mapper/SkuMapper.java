@@ -1,7 +1,7 @@
 package com.dag.aop.demo.mapper;
 
-import com.dag.aop.demo.pojo.Sku;
-import com.dag.aop.demo.pojo.SkuExample;
+import com.dag.aop.demo.domain.po.Sku;
+import com.dag.aop.demo.domain.example.SkuExample;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

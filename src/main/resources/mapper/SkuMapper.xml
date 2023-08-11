@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.dag.aop.demo.mapper.SkuMapper" >
-  <resultMap id="BaseResultMap" type="com.dag.aop.demo.pojo.Sku" >
+  <resultMap id="BaseResultMap" type="com.dag.aop.demo.domain.po.Sku" >
     <id column="id" property="id" jdbcType="VARCHAR" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="price" property="price" jdbcType="INTEGER" />
@@ -44,7 +44,7 @@
   <sql id="Base_Column_List" >
     id, name, price, num, image, category_name, brand_name, spec, sale_num
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.dag.aop.demo.pojo.SkuExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.dag.aop.demo.domain.example.SkuExample" >
     select
     <if test="distinct" >
       distinct
@@ -69,7 +69,7 @@
     delete from tb_sku
     where id = #{id,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="com.dag.aop.demo.pojo.Sku" >
+  <insert id="insert" parameterType="com.dag.aop.demo.domain.po.Sku" >
     insert into tb_sku (id, name, price, 
       num, image, category_name, 
       brand_name, spec, sale_num
@@ -79,7 +79,7 @@
       #{brandName,jdbcType=VARCHAR}, #{spec,jdbcType=VARCHAR}, #{saleNum,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.dag.aop.demo.pojo.Sku" >
+  <insert id="insertSelective" parameterType="com.dag.aop.demo.domain.po.Sku" >
     insert into tb_sku
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -140,7 +140,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.dag.aop.demo.pojo.Sku" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.dag.aop.demo.domain.po.Sku" >
     update tb_sku
     <set >
       <if test="name != null" >
@@ -170,7 +170,7 @@
     </set>
     where id = #{id,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.dag.aop.demo.pojo.Sku" >
+  <update id="updateByPrimaryKey" parameterType="com.dag.aop.demo.domain.po.Sku" >
     update tb_sku
     set name = #{name,jdbcType=VARCHAR},
       price = #{price,jdbcType=INTEGER},

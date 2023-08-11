@@ -1,4 +1,4 @@
-package com.dag.aop.demo.pojo;
+package com.dag.aop.demo.domain.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Sku {
+public class SkuDTO {
     private String id;
 
     private String name;
