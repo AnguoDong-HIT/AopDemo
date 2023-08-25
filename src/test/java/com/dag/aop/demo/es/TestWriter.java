@@ -33,26 +33,6 @@ public class TestWriter extends TestBase {
     for (Sku sku : skuList) {
       ingester.add(op -> op.index(i -> i.index("products").id(sku.getId()).document(sku)));
     }
-    //        for (Sku sku : skuList) {
-    //            builder.operations(op -> op
-    //                    .index(idx -> idx
-    //                            .index("products")
-    //                            .id(sku.getId())
-    //                            .document(sku)
-    //                    )
-    //
-    //            );
-    //        }
-    //
-    //        BulkResponse result = esClient.bulk(builder.build());
-    //        if (result.errors()) {
-    //            log.error("Bulk had errors");
-    //            for (BulkResponseItem item: result.items()) {
-    //                if (item.error() != null) {
-    //                    log.error(item.error().reason());
-    //                }
-    //            }
-    //        }
   }
 
   @Test
